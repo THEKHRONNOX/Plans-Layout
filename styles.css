@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --text-color: rgb(250, 250, 250);
+    --main-background: rgb(175, 40, 48);
+    --card-color: rgb(34, 22, 26);
+}
+
+body {
+    background-color: var(--main-background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-height: 485px;
+    height: 100%;
+    max-width: 685px;
+    width: 100%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0px 23px 32px -18px;
+}
+
+.content-wrapper {
+    height: 60%;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    
+}
+
+.columns {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 77%;
+    color: var(--text-color);
+}
+
+hr {
+    opacity: .1;
+}
+
+.headers {
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 25px;
+    opacity: .7;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
+    opacity: .6;
+}
+
+p {
+    font-size: 12px;
+    opacity: .5;
+}
+
+.headers div {
+    line-height: 20px;
+}
+
+li {
+    list-style-position: inside;
+    font-size: 12px;
+    max-width: 9rem;
+    width: 100%;
+    height: 100%;
+    line-height: 19px;
+    opacity: .5;
+}
+
+button {
+    max-width: 169px;
+    width: 100%;
+    height: 2.4rem;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+button:hover {
+    box-shadow: inset 0 0 2px 1px;
+}
+
+.start-btn {
+    background-color: var(--card-color);
+    border: 1px solid;
+    border-color: var(--main-background);
+    color: var(--main-background);
+    opacity: .6;
+}
+
+.start-btn:hover {
+    background-color: var(--main-background);
+    color: var(--text-color);
+    opacity: 1;
+    border-style: none;
+}
+
+.try-btn {
+    background-color: var(--main-background);
+    color: var(--text-color);
+    border-style: none;
+}
+
+@media (max-width: 535px) {
+    
+    .content-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1px 1fr;
+        height: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-height: 98%;
+        box-shadow: none;
+    }
+
+    .columns {
+        display: grid;
+        place-items: center;
+        grid-template-rows: 8rem 5rem;
+    }
+
+    .headers {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    p {
+        display: none;
+    }
+    
+}
